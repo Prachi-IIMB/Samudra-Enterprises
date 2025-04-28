@@ -1,0 +1,184 @@
+/* 
+   Samudra Engineers - Responsive Styles
+   Author: Web Developer
+   Version: 1.0
+*/
+
+/* Media Queries for Responsive Design */
+
+/* Large Screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+}
+
+/* Medium Screens (992px to 1199px) */
+@media screen and (max-width: 1199px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Small Screens (768px to 991px) */
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 14px;
+    }
+
+    .about-content,
+    .history-content,
+    .vision-content,
+    .testimonial,
+    .solutions-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-text,
+    .history-text,
+    .vision-text,
+    .solution-text {
+        order: 2;
+    }
+
+    .about-image,
+    .history-image,
+    .vision-image,
+    .solution-image {
+        order: 1;
+    }
+
+    .quote {
+        order: 2;
+    }
+
+    .founder-image {
+        order: 1;
+    }
+
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Extra Small Screens (Mobile - 767px and down) */
+@media screen and (max-width: 767px) {
+    #header .container {
+        padding: 1rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--light-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .features-grid {
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-grid {
+        gap: 2rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .contact-info, .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Very Small Screens (480px and down) */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+
+    #page-banner {
+        padding: 7rem 0 3rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card .icon,
+    .service-icon {
+        font-size: 2.5rem;
+    }
+
+    .info-item {
+        flex-direction: column;
+    }
+
+    .info-item .icon {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+}
